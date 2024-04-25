@@ -1,4 +1,4 @@
-package com.sensedia.netsuite.integration.controller;
+package com.sensedia.netsuite.integration.adapters.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 public class SkillsController {
 
     @PostMapping
-    public ResponseEntity<String> createSkill() {
+    public ResponseEntity<String> createSkill(@RequestBody String description) {
         return ResponseEntity.created(null).body("Skill created");
     }
 
