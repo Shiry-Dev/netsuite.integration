@@ -27,6 +27,5 @@ public class SkillsController {
     public ResponseEntity<String> removeSkillFromEmployee(@PathVariable String idSkill,
                                                           @PathVariable String idCollaborator) {
         return ResponseEntity.noContent().build();
-
     }
 }
