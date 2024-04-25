@@ -1,4 +1,14 @@
 package com.sensedia.netsuite.integration.adapters.dto;
 
-public record ProjectsDTO() {
+import java.util.List;
+
+public record ProjectsDTO(
+        String currentClient,
+        List<LastClientDTO> lastClient
+) {
+}
+
+record LastClientDTO(
+        String name
+) {
 }

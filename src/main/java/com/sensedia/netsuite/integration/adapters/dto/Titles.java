@@ -1,4 +1,6 @@
 package com.sensedia.netsuite.integration.adapters.dto;
 
-public record Titles() {
+public record Titles(
+        String title
+) {
 }
