@@ -1,4 +1,4 @@
-package com.sensedia.netsuite.integration.adapters.dto;
+package com.sensedia.netsuite.integration.adapters.dto.collaborators;
 
 public record TagsDTO(
         int id,
