@@ -23,7 +23,7 @@ public class Collaborator implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "collaborator_id")
-    private int collaboratorId;
+    private Long collaboratorId;
 
     @Column(name = "employee")
     private String employee;
@@ -32,19 +32,19 @@ public class Collaborator implements Serializable {
     private String email;
 
     @Column(name = "class")
-    private byte classes;
+    private Byte classes;
 
     @Column(name = "employee_level")
-    private int employeeLevel;
+    private Byte employeeLevel;
 
     @Column(name = "supervisor_id")
-    private int supervisorId;
+    private Integer supervisorId;
 
     @Column(name = "title")
     private String title;
 
     @Column(name = "is_job_resource")
-    private boolean isJobResource;
+    private Boolean isJobResource;
 
     @OneToMany(mappedBy = "collaborator", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Set<Allocation> allocations;

@@ -20,7 +20,7 @@ public class CollaboratorTag implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "collaborator_tag_id")
-    private int collaboratorTagId;
+    private Long collaboratorTagId;
 
     @ManyToOne
     @JoinColumn(name = "collaborator_id", referencedColumnName = "collaborator_id", nullable = false)

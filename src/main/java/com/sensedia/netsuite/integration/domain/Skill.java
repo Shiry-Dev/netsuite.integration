@@ -22,7 +22,7 @@ public class Skill implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "skill_id")
-    private int skillId;
+    private Long skillId;
 
     @Column(name = "description")
     private String description;

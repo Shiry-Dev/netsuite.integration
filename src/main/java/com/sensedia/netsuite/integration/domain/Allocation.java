@@ -22,20 +22,20 @@ public class Allocation implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "allocation_id")
-    private int allocationId;
+    private Long allocationId;
 
     @ManyToOne
     @JoinColumn(name = "collaborator_id", referencedColumnName = "collaborator_id", nullable = false)
     private Collaborator collaborator;
 
     @Column(name = "project")
-    private int project;
+    private Integer project;
 
     @Column(name = "alt_name")
     private String altName;
 
     @Column(name = "project_task")
-    private int projectTask;
+    private Integer projectTask;
 
     @Column(name = "full_name")
     private String fullName;
@@ -47,25 +47,27 @@ public class Allocation implements Serializable {
     private LocalDate endDate;
 
     @Column(name = "number_hours")
-    private int numberHours;
+    private Integer numberHours;
 
     @Column(name = "is_billable")
-    private boolean isBillable;
+    private Boolean isBillable;
 
     @Column(name = "is_overhead")
-    private boolean isOverhead;
+    private Boolean isOverhead;
 
     @Column(name = "unit")
+    @Enumerated(EnumType.STRING)
     private AllocationUnit unit;
 
     @Column(name = "percent_of_time")
-    private int percentOfTime;
+    private Integer percentOfTime;
 
-    @Column(name = "type")
+    @Column(name = "allocation_type")
+    @Enumerated(EnumType.STRING)
     private AllocationType type;
 
     @Column(name = "is_active")
-    private boolean isActive;
+    private Boolean isActive;
 
     @Override
     public boolean equals(Object o) {

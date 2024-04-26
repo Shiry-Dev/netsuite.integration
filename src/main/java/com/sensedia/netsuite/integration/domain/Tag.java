@@ -22,7 +22,7 @@ public class Tag implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "tag_id")
-    private int tagId;
+    private Long tagId;
 
     @Column(name = "description")
     private String description;
