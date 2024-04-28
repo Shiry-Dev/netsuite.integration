@@ -1,3 +1,5 @@
+-- CREATE SCHEMA IF NOT EXISTS NetSuiteIntegration DEFAULT CHARACTER SET utf8;
+-- USE NetSuiteIntegration;
 -- CREATE TYPE IF NOT EXISTS allocation_type AS ENUM ('HARD', 'SOFT');
 
 -- CREATE TYPE IF NOT EXISTS allocation_unit AS ENUM ('PERCENT_OF_TIME', 'HOURS');

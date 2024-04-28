@@ -1,0 +1,27 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:14.4-alpine
+    container_name: netsuie-integration-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
+
+  # MIGRATION
+  # flyway:
+  #   image: flyway/flyway:latest
+  #   container_name: example-flyway-migration
+  #   command: -locations=filesystem:/flyway/sql -connectRetries=60 -url=jdbc:mysql://mysql:3306/MYSQL_DATABASE_NAME?allowPublicKeyRetrieval=true&useSSL=false -user=root -password=root_password migrate
+  #   volumes:
+  #     - ./scripts:/flyway/sql
+  #   depends_on:
+  #     - mysql
+  #   networks:
+  #     - db-network
+
+networks:
+  db-network:
+    driver: bridge
